@@ -1,0 +1,5 @@
+M675 X F600 R1 P0		; probe x min/max, 1mm retract, probe 0
+M400                    ; wait for move to finish
+M675 Y F600 R1 P0		; probe y min/max, 1mm retract, probe 0
+M400                    ; wait for move to finish
+;G10 L20 X0 Y0           ; set centre position to 0

@@ -1,0 +1,1 @@
+G10 L2 X0 Y-30             ; sets Probe offset dimenstions to nozzle, called after probing macro or manual activation

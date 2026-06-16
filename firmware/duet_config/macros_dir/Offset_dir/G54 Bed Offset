@@ -1,0 +1,3 @@
+G54                                             ; set active coordinate system to G54
+;G10 L2 P1 X-162.15 Y-107.45 Z-158.9 A0 C0       ; Viscotec offset from machine coordinate system
+G10 L2 P1 X-162.45 Y-188.35 Z-165.50 A0 C0      ; offset from machine coordinate system

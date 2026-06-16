@@ -1,0 +1,2 @@
+M703    ; call filament config
+M568 A2 ; heater active

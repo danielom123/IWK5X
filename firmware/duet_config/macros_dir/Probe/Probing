@@ -1,0 +1,41 @@
+; Select coordinate system
+M291 R"Select coordinate system" P"G54 = coordinate system 1, G55 = coordinate system 2, ..." S4 K{"G54","G55","G56","G57","G58","G59"}
+if input=0
+    G54
+elif input=1
+    G55
+elif input=2
+    G56
+elif input=3
+    G57
+elif input=4
+    G58
+elif input=5
+    G59
+
+; Probing
+    M291 R"Jog Control" P"Move next to probe point" X1 Y1 Z1 A1 C1 S3
+
+    M291 R"Jog Control" P"Select probing mode" S4 K{"X+","X-","Y+","Y-","Z-","X centre","Y centre", "Hole centre","Abort"}
+    if input=0
+        M98 P"0:/macros/Probe/ProbeControl/1_Probe X+"
+    elif input=1
+        M98 P"0:/macros/Probe/ProbeControl/2_Probe X-"
+    elif input=2
+        M98 P"0:/macros/Probe/ProbeControl/3_Probe Y+"
+    elif input=3
+        M98 P"0:/macros/Probe/ProbeControl/4_Probe Y-"
+    elif input=4
+        M98 P"0:/macros/Probe/ProbeControl/5_Probe Z-"
+    elif input=5
+        M98 P"0:/macros/Probe/ProbeControl/6_Probe X Centre"
+    elif input=6
+        M98 P"0:/macros/Probe/ProbeControl/7_Probe Y Centre"
+    elif input=7
+        M98 P"0:/macros/Probe/ProbeControl/8_Probe Hole Centre"
+    elif input=8
+        M99
+    
+
+
+		
