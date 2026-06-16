@@ -1,0 +1,174 @@
+﻿STEP to UG
+! INFO-     NX STEP AP214 - V2212.8901
+! INFO-      
+! INFO-     Start of Translation: 8-JAN-2024  8:51:39 AM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\daniel.aeschbacher\OST\BA 5-Achsen 3D-Drucker - Aeschbacher - General\30_CAX\31_Kostruktion\Voron\Voron_2.4r2_X5\STEP_Files\M3_Standard.step
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Unknown
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        C:/Users/stefa/Desktop/Sync/Podcast/Produkte/Inserts/CAD/M3_Standard.step
+! SUMMARY-  Date             2021-08-31T16:43:02+02:00
+! SUMMARY-  Author           Unknown
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      ST-DEVELOPER v18.1
+! SUMMARY-  Orig_System      Autodesk Translation Framework v10.10.0.1391
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        automotive_design
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:    326
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  axis2_placement_3d .........................................:    240
+! SUMMARY-  b_spline_curve_with_knots ..................................:    482
+! SUMMARY-  b_spline_surface_with_knots ................................:    167
+! SUMMARY-  brep_with_voids ............................................:      1
+! SUMMARY-  cartesian_point ............................................:   7288
+! SUMMARY-  circle .....................................................:     80
+! SUMMARY-  closed_shell ...............................................:     12
+! SUMMARY-  conical_surface ............................................:      5
+! SUMMARY-  cylindrical_surface ........................................:     60
+! SUMMARY-  direction ..................................................:    813
+! SUMMARY-  edge_curve .................................................:    895
+! SUMMARY-  edge_loop ..................................................:    333
+! SUMMARY-  face_bound .................................................:      7
+! SUMMARY-  face_outer_bound ...........................................:    326
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      2
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  line .......................................................:    333
+! SUMMARY-  oriented_closed_shell ......................................:     11
+! SUMMARY-  oriented_edge ..............................................:   1790
+! SUMMARY-  plane ......................................................:     94
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_context ............................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_context .................................:      1
+! SUMMARY-  product_definition_formation ...............................:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      2
+! SUMMARY-  vector .....................................................:    333
+! SUMMARY-  vertex_point ...............................................:    596
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          14207
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 8-JAN-2024 8:51:40 AM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 8-JAN-2024  8:51:41 AM
+! INFO-     Filing Part ..: C:\Users\daniel.aeschbacher\OST\BA 5-Achsen 3D-Drucker - Aeschbacher - General\30_CAX\31_Kostruktion\Voron\Voron_2.4r2_X5\NX-Files\Modifications\M3_Standard.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         1
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         1
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 8-JAN-2024  8:51:44 AM
+! INFO-      
+STEP to UG
+! INFO-     NX STEP AP214 - V2212.8901
+! INFO-      
+! INFO-     Start of Translation: 8-JAN-2024  8:55:25 AM
+! INFO-      
+! STATUS-   Converting Part: C:\Users\daniel.aeschbacher\OST\BA 5-Achsen 3D-Drucker - Aeschbacher - General\30_CAX\31_Kostruktion\Voron\Voron_2.4r2_X5\STEP_Files\M3_Standard.step
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Unknown
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        C:/Users/stefa/Desktop/Sync/Podcast/Produkte/Inserts/CAD/M3_Standard.step
+! SUMMARY-  Date             2021-08-31T16:43:02+02:00
+! SUMMARY-  Author           Unknown
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      ST-DEVELOPER v18.1
+! SUMMARY-  Orig_System      Autodesk Translation Framework v10.10.0.1391
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        automotive_design
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_face ..............................................:    326
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  axis2_placement_3d .........................................:    240
+! SUMMARY-  b_spline_curve_with_knots ..................................:    482
+! SUMMARY-  b_spline_surface_with_knots ................................:    167
+! SUMMARY-  brep_with_voids ............................................:      1
+! SUMMARY-  cartesian_point ............................................:   7288
+! SUMMARY-  circle .....................................................:     80
+! SUMMARY-  closed_shell ...............................................:     12
+! SUMMARY-  conical_surface ............................................:      5
+! SUMMARY-  cylindrical_surface ........................................:     60
+! SUMMARY-  direction ..................................................:    813
+! SUMMARY-  edge_curve .................................................:    895
+! SUMMARY-  edge_loop ..................................................:    333
+! SUMMARY-  face_bound .................................................:      7
+! SUMMARY-  face_outer_bound ...........................................:    326
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      2
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  line .......................................................:    333
+! SUMMARY-  oriented_closed_shell ......................................:     11
+! SUMMARY-  oriented_edge ..............................................:   1790
+! SUMMARY-  plane ......................................................:     94
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_context ............................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_context .................................:      1
+! SUMMARY-  product_definition_formation ...............................:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      2
+! SUMMARY-  vector .....................................................:    333
+! SUMMARY-  vertex_point ...............................................:    596
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          14207
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 8-JAN-2024 8:55:25 AM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 8-JAN-2024  8:55:26 AM
+! INFO-     Filing Part ..: C:\Users\daniel.aeschbacher\OST\BA 5-Achsen 3D-Drucker - Aeschbacher - General\30_CAX\31_Kostruktion\Voron\Voron_2.4r2_X5\NX-Files\Modifications\M3_Standard.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         1
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         1
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 8-JAN-2024  8:55:27 AM
+! INFO-      

@@ -1,0 +1,2 @@
+# Manual IWK5X
+For assembling the IWK5X it is recommended to follow the cad. For all the base components, except ac_bridge and toolhead, it is suggested to follow the official Assembly_Manual_base_2.4r2 of the Voron Design Team.
