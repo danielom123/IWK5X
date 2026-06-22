@@ -1,6 +1,6 @@
 # IWK5X
 
-> Developed at the [Institute for Materials Technology and Plastics Processing (IWK)](https://www.ost.ch/de/forschung-und-dienstleistungen/technik/iwk),
+> Developed at the [Institute for Materials Technology and Plastics Processing (IWK)](https://www.ost.ch/de/forschung-und-dienstleistungen/technik/maschinentechnik/iwk-institut-fuer-werkstofftechnik-und-kunststoffverarbeitung),
 > OST – Ostschweizer Fachhochschule, Rapperswil, Switzerland
 >
 > **Authors:** Daniel Omidvarkarjan, Daniel Aeschbacher, Simon Grimm, Cedric Kundert
