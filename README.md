@@ -9,6 +9,9 @@
 > Procedia CIRP 142 (2026) 369–373 · [doi:10.1016/j.procir.2026.05.276](https://doi.org/10.1016/j.procir.2026.05.276)
 
 ---
+<img width="3755" height="2092" alt="PXL_20230619_124147241 PORTRAIT~2" src="https://github.com/user-attachments/assets/d49db741-e72f-42a1-8fbe-e62f57bf0eed" />
+
+---
 
 ## Overview
 
@@ -84,17 +87,3 @@ If you use this work, please cite the original publication:
   doi     = {10.1016/j.procir.2026.05.276}
 }
 ```
-
----
-
-## License
-
-This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
-
-[![CC BY 4.0 license button][cc-by-png]][cc-by]
-
-You are free to share this material with proper attribution, but  commercial use and derivative works are not permitted.
-See the full license text at [creativecommons.org/licenses/by-nc-nd/4.0](https://creativecommons.org/licenses/by-nc-nd/4.0).
-
-[cc-by-png]: https://licensebuttons.net/l/by/4.0/88x31.png#floatleft
-[cc-by]: https://creativecommons.org/licenses/by/4.0/
