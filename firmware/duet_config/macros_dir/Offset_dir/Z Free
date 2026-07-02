@@ -1,0 +1,1 @@
+G53 G90 G1 Z0 F6000        ; Z max machine coordinates

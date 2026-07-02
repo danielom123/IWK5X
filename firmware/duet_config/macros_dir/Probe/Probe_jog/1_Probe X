@@ -1,0 +1,4 @@
+G53 G38.2 K0 X0        ; probe X+
+M400                    ; wait for move to finish
+G90
+;G10 L20 X-1             ; set tip offset

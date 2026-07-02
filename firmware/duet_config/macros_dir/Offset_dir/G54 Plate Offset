@@ -1,0 +1,4 @@
+G54                                              ; set active coordinate system to G54
+;G10 L2 P1 X-161.95 Y-106.05 Z-159.5 A0.4 C0.4   ; offset from machine coordinate system
+;G10 L2 P1 X-162.45 Y-188.35 Z-180.30 A0 C0      ; 2024-11-25
+G10 L2 P1 X-162.45 Y-188.35 Z-181.50 A0 C0       ; 2024-11-26

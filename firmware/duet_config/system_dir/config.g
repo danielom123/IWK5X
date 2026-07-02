@@ -1,0 +1,153 @@
+; Configuration file for RepRapFirmware on Duet 3 Main Board 6HC
+; executed by the firmware on start-up
+; D.Aeschbacher 08.01.2024
+
+
+; General
+G90
+M83
+M550 P"VoronPanda" ; set hostname
+
+; Wait a moment for the CAN expansion boards to become available
+G4 S2
+
+; Kinematics
+M669 K1 ; configure CoreXY kinematics
+
+; Smart Drivers
+M569 P0.0 S0 D3 V75     ; driver 0.0 goes backwards (X/Y axis, A Motor)
+M569 P0.1 S0 D3 V75     ; driver 0.1 goes backwards (X/Y axis, B motor)
+M569 P0.2 S0 D2         ; driver 0.2 goes backwards (A axis), spreadcycle for more torque (audible noise)
+M569 P0.3 S0 D2         ; driver 0.3 goes backwards (C axis), spreadcycle for more torque (audible noise)
+M569 P0.4 S0 D3 V23     ; driver 0.4 goes backwards (extruder 0)
+M569 P0.5 S1 D3 V31     ; driver 0.5 goes forwards (Z1 axis)
+M569 P1.0 S0 D3 V31     ; driver 1.0 goes backwards (Z2 axis)
+M569 P1.1 S1 D3 V31     ; driver 1.1 goes forwards (Z3 axis)
+M569 P1.2 S0 D3 V31     ; driver 1.2 goes backwards (Z0 axis)
+;M569 P2.0 S0 D0 		; driver 1.0 extruder Visco.1		
+;M569 P2.1 S0 D0			; driver 1.1 extruder Visco.2		
+M569 P2.0 T21:21:0:0	; minimum driver step pulse 
+M569 P2.1 T21:21:0:0 	; minimum driver step pulse
+
+
+; Axes
+M584 X0.1 Y0.0 Z0.5:1.0:1.1:1.2 A0.2 C0.3   ; set axis mapping 
+M350 X32 Y16 Z16 A16 C16 I1                 ; configure microstepping with interpolation
+M92 X160 Y160 Z400 A27.266666 C66.666666    ; configure steps per mm
+
+;V1
+;M566 X480 Y480 Z24 A48 C200                ; set maximum instantaneous speed changes (mm/min)
+;M203 X10800 Y10800 Z10800 A10800 C21600    ; set maximum speeds (mm/min)
+;M201 X1000 Y1000 Z1000 A250 C800           ; set accelerations (mm/s^2)
+;V2
+;M566 X480 Y480 Z24 A48 C200                ; set maximum instantaneous speed changes (mm/min)
+;M203 X3600 Y3600 Z3600 A1200 C1800         ; set maximum speeds (mm/min)
+;M201 X500 Y500 Z500 A125 C400              ; set accelerations (mm/s^2)
+;V3
+M566 X500 Y500 Z500 A250 C250               ; set maximum instantaneous speed changes (mm/min)
+M203 X3600 Y3600 Z3600 A1200 C1800          ; set maximum speeds (mm/min)
+M201 X200 Y200 Z200 A100 C400               ; set accelerations (mm/s^2)
+
+M906 X1200 Y1200 Z1200 C800                 ; set axis driver currents (mA)
+M906 I30                                    ; set motor current idle factor
+M906 A2200 I100                             ; set axis driver currents for A, no idle
+M84 S30                                     ; set motor current idle timeout
+
+; Axes Limits
+M208 X-300:0                        ; set X axis limits
+M208 Y-318:0                        ; set Y axis limits
+;M208 Z-181.5:2                      ; set Z axis limits -> limit to plate
+M208 Z-195:2                      ; set Z axis limits
+M208 A-90:100                       ; set A axis limits
+M208 C-32212000:32212000            ; set C axis limits
+
+; Extruders
+M584 E0.4       ; set extruder mapping
+M350 E16 I1     ; configure microstepping with interpolation
+M906 E600       ; set extruder driver currents
+M92 E400        ; configure steps per mm
+M566 E270       ; set maximum instantaneous speed changes (mm/min)
+M203 E4800      ; set maximum speeds (mm/min)
+M201 E1000      ; set accelerations (mm/s^2)
+
+;Extruder ViscoTec-Kopf 12					
+;M584 E2.0:2.1 ; set extruder mapping							
+;M350 E2.0:2.1 I0 ; configure microstepping with interpolation	
+;M906 E770:770 ; set extruder driver currents
+;M92 E1002.17:1002.17 ; configure steps per mm !IF FILAMENTDIAMETER = 1mm IN SLICER!
+;M566 E50:50 ; set maximum instantaneous speed changes (mm/min)
+;M203 E2000:2000 ; set maximum speeds (mm/min)
+;M201 E250:250 ; set accelerations (mm/s^2)
+
+; Endstops
+M574 X2 S1 P"io0.in"                        ; configure X axis endstop
+M574 Y2 S1 P"io1.in"                        ; configure Y axis endstop
+M574 Z2 S1 P"io4.in+io5.in+io7.in+io2.in"   ; configure Z axis endstop
+M574 A1 S1 P"io6.in"                        ; configure A axis endstop
+M574 C0 S1 P"io3.in"                        ; configure C axis endstop
+
+; Touch-Probe
+M558 P8 C"!1.io0.in" K0 H5 F300 T3000 B1 
+
+; Heated bed
+M308 S0 P"temp0" Y"thermistor" A"Heated Bed" T100000 B4138  ; configure sensor #0
+M950 H0 C"out0" T0                                          ; create heater #0
+M140 P0 H0                                                  ; configure heated bed #0
+M143 H0 P0 T0 C0 S110 A0                                    ; configure heater monitor #0 for heater #0
+M307 H0 R0.355 K0.334:0.000 D2.17 E1.35 S1.00 B0            ; configure model of heater #0, PID values from M303 auto-tune
+
+; Heater
+M308 S1 P"temp1" Y"pt1000" A"Nozzle"                        ; configure sensor #1
+M950 H1 C"out2" T1                                          ; create heater #1
+M143 H1 P0 T1 C0 S350 A0                                    ; configure heater monitor #0 for heater #1
+M307 H1 R3.897 K0.450:0.000 D6.84 E1.35 S1.00 B0 V24.0      ; configure model of heater #1, PID values from M303 auto-tune
+
+; Fans
+M950 F0 C"out7" Q500                    ; create fan #0
+M106 P0 C"Hotend Fan" S0 B0.1 H1 T50    ; configure fan #0
+
+M950 F1 C"out8" Q500                    ; create fan #1
+M106 P1 C"Part Fan" S0 L0 X1 B0.1       ; configure fan #1
+
+M950 F2 C"out9" Q500                    ; create fan #2
+M106 P2 C"C Fan" S1 L0 X1 B0.1          ; configure fan #2
+
+M950 F3 C"1.out6" Q500                  ; create fan #3
+M106 P3 C"A Fan" S0.7 L0 X1 B0.1        ; configure fan #3
+
+M308 S10 Y"mcu-temp" A"MB-MCU"                              ; defines sensor 10 as MCU temperature sensor on MB
+M308 S11 Y"mcu-temp" P"1.dummy" A"3HC-MCU"                  ; defines sensor 11 as MCU temperature sensor on 3HC
+M308 S12 Y"drivers" A"MB-Drivers"                           ; defines sensor 12 as stepper driver temperature sensor on MB
+M308 S13 Y"drivers" P"1.dummy" A"3HC-Drivers"               ; defines sensor 13 as stepper driver temperature sensor on 3HC
+M950 F4 C"out4" Q500                                        ; create fan #4
+M106 P4 C"PCB Fans" L0.1 X1 H10:11:12:13 T30:50 B0.1        ; configure fan #4
+
+; LED
+M950 F5 C"out5" Q3000000        ; create led as "fan 5"
+M106 P5 C"LED" S1 B0.1 H-1      ; configure led
+
+; Tools
+M563 P1 S"Rapido" D0 H1 F1      ; create tool #1
+M568 P1 R0 S10                  ; set initial tool #1 active and standby temperatures to 0C
+
+;M563 P0 D0:1 S"Head12"			; creat tool #1 (0)
+;M568 P0 X-83.5					;Set offset in X 64 + 6 + 27/2= 83.5
+;M567 P0 E1:1				; Mixing extruder
+
+M563 P2 S"Touch probe"          ; create tool #2
+M568 P2 X30 Y0 Z-21.5           ; set custom offsets for tool #2
+
+; GPIO Pins
+M950 P1 C"!io8.out"             ; allocate GPIO port 1 to GPIO pin IO_0 on 3HC inverted 
+;M950 P2 C"!1.io1.out"           ; allocate GPIO port 2 to GPIO pin IO_1 on 3HC inverted
+M42 P1 S0                       ; disabe P1 by default
+;M42 P2 S0                       ; disabe P2 by default
+
+
+; Miscellaneous
+M501                                                ; load saved parameters from non-volatile memory
+T0                                                  ; select first tool
+;M572 D0 S0.1                                        ; set initial pressure advance value
+M98 P"1:/macros/Offset Directory/G54 Bed offset"    ; call initial G54 offset
+;M98 P"0:/macros/Offset Directory/G54 Plate Offset"  ; call offset ALU
+M912 P0 S-7									        ; offset MCU temp sensor

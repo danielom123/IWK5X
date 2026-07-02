@@ -1,0 +1,2 @@
+G53 G38.2 K0 X-350      ; probe X-
+M400                    ; wait for move to finish

@@ -1,0 +1,13 @@
+M291 R"Select coordinate system" P"G54 = coordinate system 1, G55 = coordinate system 2, ..." S4 K{"G54","G55","G56","G57","G58","G59"}
+if input=0
+    G54
+elif input=1
+    G55
+elif input=2
+    G56
+elif input=3
+    G57
+elif input=4
+    G58
+elif input=5
+    G59
